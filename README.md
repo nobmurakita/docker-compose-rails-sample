@@ -1,24 +1,22 @@
-# README
+# docker-compose-rails-sample
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+https://docs.docker.com/compose/rails/
 
-Things you may want to cover:
+docker-compose で Rails/PostgreSQL を動かすサンプル
 
-* Ruby version
+## 起動
 
-* System dependencies
+```
+$ git clone https://github.com/nobmurakita/docker-compose-rails-sample.git
+$ cd docker-compose-rails-sample
+$ docker-compose build
+$ docker-compose up
+```
 
-* Configuration
+## データベース作成
 
-* Database creation
+別ターミナルで
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+$ docker-compose run web rake db:create
+```
